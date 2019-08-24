@@ -113,3 +113,18 @@ p {
     margin-right: 20px;
     margin-bottom: 20px;
 }
+
+li {
+    display: inline;
+    float: left;
+}
+
+
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 960px;
+    border-top: 8px solid #4aaaa5; 
+}
