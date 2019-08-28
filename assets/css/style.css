@@ -1,133 +1,74 @@
-body {
-    color: #777777;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #cccccc;   
-}
+/**
+ * Media Query Demo (note the commented rules)
+ **/
 
-.all-content {
-    max-width: 960px;
-    margin: auto;
-}
-
-div {
-    display: block;
-}
-
-h2, h3, h4, h5, h6 {
-    color: #4aaaa5;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-h1, h3 {
-    color: #ffffff;
-}
-
-header {
-    background: #ffffff;
-    border: #cccccc;
-    width: 100%;
-    top: 0;
-    height: 80px;
-    border-bottom: 1px solid #cccccc;
-    z-index: 2;
-}
-
-#header-container {
-   margin: auto 0;
-   height: 100%;
-}
-
-#title-div {
-    background: #4aaaa5;
-    float: left;
-    width: 250px;
-    text-align: center;
-}
-
-nav {
-    display: block;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
-
-li {
-
-}
-
-#menu {
-float: right;
-margin-top: 30px;
-height: 80px;
-}
-
-.menu-item {
-    float: left;
-    text-align: webkit-match-parent;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+ * {
+    box-sizing: border-box;
   }
-
-
-main {
-    background: #ffffff;
-    border: #dddddd;
-}
-
-a {
-    text-decoration: none;
-}
-
-#about-me-area {
-    width: 100%;
-}
-
-article {
-    width: 100%;
-}
-
-img {
+  
+  /*
+    The background color will be #ccc
+    at browser widths above 768px
+  */
+  body {
+    /* Typography */
+    font-size: 18px;
+    line-height: 27px;
+  
+    /* Visual */
+    background-color: #ccc;
+  }
+  
+  /*
+    The width of the wrapper will be 1024px
+    at browser widths above 768px
+  */
+  .wrapper {
+    /* Box-model */
+    width: 1024px;
+  
+    /* Positioning */
+    margin: 40px auto;
+  }
+  
+  #main-content,
+  #sidebar {
+    /* Box-model */
+    width: 500px;
+    padding: 30px;
+  }
+  
+  #main-content {
+    /* Positioning */
     float: left;
-}
-
-p {
-    line-height: 1.5;
-}
-
-#portrait {
-    margin-left: 0;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-li {
-    display: inline;
-    float: left;
-}
-
-
-
-footer {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    width: 960px;
-    border-top: 8px solid #4aaaa5;
-    background: #666666;
-    margin: auto;
- 
-}
+  
+    /* Visual */
+    background: #fff;
+  }
+  
+  #sidebar {
+    /* Positioning */
+    float: right;
+  
+    /* Visual */
+    background: #eee;
+  }
+  
+  /*
+    These rules take effect when the browser's width
+    is either 768px or less.
+  */
+  @media screen and (max-width: 768px) {
+    /* The body's bg color will be #333 */
+    body {
+      background-color: rgb(237, 14, 14);
+    }
+  
+    /* The wrapper's width will be 600px */
+    .wrapper {
+      width: 600px;
+      margin: 0 10px;
+      padding: 0 auto;
+    }
+  }
+  
